@@ -9,6 +9,9 @@ const buildCurrentDay = (dayInfo) => {
     const card = document.createElement('div');
     card.classList.add('big-card');
 
+    const location = document.createElement('h1');
+    location.innerText = `${dayInfo.location}`
+
     const day = document.createElement('h3');
     day.innerText = `${dayInfo.day}`;
 
@@ -43,6 +46,7 @@ const buildCurrentDay = (dayInfo) => {
     tempBox.append(tempLabel);
     tempBox.append(temp);
 
+    card.append(location);
     card.append(day);
     card.append(condition);
     card.append(icon);
@@ -61,7 +65,7 @@ export const renderToday= (data) => {
         const forecast = data.current;
         const date = moment().format('LLLL').split(',');
         console.log(forecast);
-        const dayInfo = createCurrentDayInfo(`${date[0]}, ${date[1]}`, forecast.temp_c, forecast.feelslike_c, forecast.condition);
+        const dayInfo = createCurrentDayInfo(`${date[0]}, ${date[1]}`, forecast.temp_c, forecast.feelslike_c, forecast.condition, `${data.location.name}, ${data.location.country}`);
         const card = buildCurrentDay(dayInfo);
         today.append(card);
     }

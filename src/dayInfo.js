@@ -1,6 +1,6 @@
-export const createCurrentDayInfo = (day, temp, feelsLike, condition) => {
+export const createCurrentDayInfo = (day, temp, feelsLike, condition, location) => {
     
-    return { day, temp, feelsLike, condition };
+    return { day, temp, feelsLike, condition, location };
 };
 
 export const createFutureDayInfo = (day, maxTemp, minTemp, condition) => {

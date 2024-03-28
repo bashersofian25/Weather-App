@@ -2,6 +2,7 @@ export const createCard = (DayInfo) => {
     const card = document.createElement('div');
     card.classList.add('card');
 
+
     const day = document.createElement('h3');
     day.innerText = `${DayInfo.day}`;
 
