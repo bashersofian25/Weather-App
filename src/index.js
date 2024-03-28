@@ -1,7 +1,14 @@
 import "./style.css";
-import { asyncRequestData } from "./apiRequest";
-console.log("working!");
-asyncRequestData("Amman");
+import { asyncHandelSearch } from "./handelSearch";
+import searchIcon from './assets/magnify.svg';
+
+const searchButton = document.getElementById('search-button');
+searchButton.addEventListener('click', asyncHandelSearch);
+const searchIconTag = document.getElementById('search-icon');
+searchIconTag.src = searchIcon;
+
+
+
 
 
 
