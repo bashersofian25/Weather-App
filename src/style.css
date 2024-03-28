@@ -1,6 +1,10 @@
 p {
     text-align: center;
 }
+#me {
+    font-size: x-large;
+    font-weight: bold;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 3px;

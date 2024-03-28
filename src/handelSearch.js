@@ -7,3 +7,8 @@ export const asyncHandelSearch = async () => {
     const data = await asyncRequestData(searchBar.value);
     renderAll(data);
 };
+
+export const asyncHandelFirstRender = async () => {
+    const data = await asyncRequestData('Amman');
+    renderAll(data);
+}
